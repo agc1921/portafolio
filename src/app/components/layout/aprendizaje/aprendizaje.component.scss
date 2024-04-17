@@ -1,0 +1,14 @@
+:host {
+  display: block;
+  background-color: #f9fafb;
+}
+
+.img-aprendizaje {
+  height: 290px;
+  box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.44);
+  transition: transform 0.2s ease;
+  &:hover{
+    transform: scale(1.1);
+  }
+}
+

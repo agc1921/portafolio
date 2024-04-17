@@ -1,0 +1,12 @@
+:host {
+  display: block;
+  background-color: #f9fafb;
+}
+
+.img-skills{
+  height: 65px;
+  transition: transform 0.2s ease;
+  &:hover{
+    transform: scale(1.1);
+  }
+}

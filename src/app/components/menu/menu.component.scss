@@ -1,0 +1,16 @@
+:host {
+  display: block;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+
+  .nav-link{
+    &:hover, &:focus{
+      font-weight: 500;
+    }
+  }
+}
+

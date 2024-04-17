@@ -1,0 +1,17 @@
+<div class="container py-5">
+  <div class="justify-content-center align-items-center text-center">
+    <div class ="mb-3 pt-4">
+      <span class ="title-section">Aprendizaje</span>
+    </div>
+  </div>
+
+  <div class="row justify-content-around">
+    @for(item of cursos; track $index){
+      <div class="text-center p-4 pt-5 col-lg-4 col-md-6 col-12">
+        <a [href]="item.url" target="_blank">
+          <img [src]="item.src" alt="{{item.alt}}" class="img-fluid img-aprendizaje">
+        </a>
+      </div>
+    }
+  </div>
+</div>
