@@ -15,6 +15,14 @@ export class AprendizajeComponent {
 
   public cursos = [
     {
+      src: "./assets/img-aprendizaje/diplomado-web.png", alt: "diplomado",
+      url: "https://www.credly.com/badges/7e554b14-73f1-42b7-914b-19adc10aca13/linked_in_profile"
+    },
+    {
+      src: "./assets/img-aprendizaje/curso-angular-pro.jpg",alt: "angular",
+      url: "https://www.udemy.com/certificate/UC-7eda49ac-c515-4c95-84b2-e08a4bbad939/"
+    },
+    {
       src: "./assets/img-aprendizaje/curso-angular.jpg",alt: "angular",
       url: "https://www.udemy.com/certificate/UC-9b657733-577d-4913-a452-f39c2b72da78/"
     },
@@ -37,12 +45,7 @@ export class AprendizajeComponent {
     {
       src: "./assets/img-aprendizaje/curso-vue.jpg", alt: "vue",
       url: "https://www.udemy.com/certificate/UC-985d702b-4ff6-4104-9472-566094afef07/"
-    },
-
-    {
-      src: "./assets/img-aprendizaje/diplomado-web.png", alt: "diplomado",
-      url: "https://www.credly.com/badges/7e554b14-73f1-42b7-914b-19adc10aca13/linked_in_profile"
-    },
+    }
 
   ];
 
