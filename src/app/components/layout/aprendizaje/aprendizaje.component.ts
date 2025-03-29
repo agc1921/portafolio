@@ -19,7 +19,7 @@ export class AprendizajeComponent {
       url: "https://www.credly.com/badges/7e554b14-73f1-42b7-914b-19adc10aca13/linked_in_profile"
     },
     {
-      src: "./assets/img-aprendizaje/curso-angular-pro.jpg",alt: "angular",
+      src: "./assets/img-aprendizaje/curso-angular-pro.png",alt: "angular",
       url: "https://www.udemy.com/certificate/UC-7eda49ac-c515-4c95-84b2-e08a4bbad939/"
     },
     {
