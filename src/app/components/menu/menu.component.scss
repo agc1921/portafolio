@@ -23,21 +23,17 @@
   }
 
   &__logo {
-    font-family: "DM Mono", monospace;
+    font-family: 'DM Mono', monospace;
     font-size: 1.1rem;
     font-weight: 500;
-    color: #1c1c1c;
+    color: #1C1C1C;
     cursor: pointer;
     letter-spacing: -0.02em;
     position: relative;
     z-index: 1002;
 
-    &-mark {
-      color: #c4622d;
-    }
-    &-accent {
-      color: #c4622d;
-    }
+    &-mark { color: #C4622D; }
+    &-accent { color: #C4622D; }
   }
 
   &__links {
@@ -49,7 +45,7 @@
   &__link {
     font-size: 0.875rem;
     font-weight: 400;
-    color: #3d3d3d;
+    color: #3D3D3D;
     cursor: pointer;
     position: relative;
     display: flex;
@@ -59,27 +55,25 @@
     text-decoration: none;
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       bottom: -3px;
       left: 0;
       width: 0;
       height: 1px;
-      background: #c4622d;
+      background: #C4622D;
       transition: width 0.3s ease;
     }
 
     &:hover {
-      color: #c4622d;
-      &::after {
-        width: 100%;
-      }
+      color: #C4622D;
+      &::after { width: 100%; }
     }
   }
 
   &__link-num {
     font-size: 0.8rem;
-    color: #c4622d;
+    color: #C4622D;
     opacity: 0.8;
     display: flex;
     align-items: center;
@@ -100,23 +94,16 @@
       display: block;
       width: 24px;
       height: 2px;
-      background: #1c1c1c;
+      background: #1C1C1C;
       border-radius: 2px;
       transition: all 0.3s ease;
       transform-origin: center;
     }
 
     &.active {
-      span:nth-child(1) {
-        transform: translateY(7px) rotate(45deg);
-      }
-      span:nth-child(2) {
-        opacity: 0;
-        transform: scaleX(0);
-      }
-      span:nth-child(3) {
-        transform: translateY(-7px) rotate(-45deg);
-      }
+      span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+      span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
     }
   }
 }
@@ -146,7 +133,7 @@ a {
       bottom: 0;
       width: 100vw;
       height: 100vh;
-      background: #f5f0e8;
+      background: #F5F0E8;
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -161,24 +148,22 @@ a {
           font-size: 1.4rem;
           font-weight: 500;
           animation: fadeUp 0.35s ease both;
-          color: #1c1c1c;
+          color: #1C1C1C;
 
-          &:hover {
-            color: #c4622d;
-          }
+          &:hover { color: #C4622D; }
         }
 
         // Botón de descarga dentro del menú móvil
         .nav-link-download {
           animation: fadeUp 0.35s ease 0.4s both;
           margin-top: 0.5rem;
+
+          
         }
       }
     }
 
-    &__link-num {
-      font-size: 0.9rem;
-    }
+    &__link-num { font-size: 0.9rem; }
 
     &__burger {
       display: flex;
@@ -186,36 +171,26 @@ a {
   }
 
   @keyframes fadeUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
   }
 }
 
 .btn-download {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: #1c1c1c;
-  color: white;
-  border: none;
-  padding: 0.5rem 2rem;
-  border-radius: 99px;
-  font-size: 0.95rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background 0.25s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #1C1C1C;
+            color: white;
+            border: none;
+            padding: 0.5rem 2rem;
+            border-radius: 99px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.25s ease;
 
-  &:hover {
-    background: #c4622d;
-  }
+            &:hover { background: #C4622D; }
 
-  i {
-    font-size: 1rem;
-  }
-}
+            i { font-size: 1rem; }
+          }
