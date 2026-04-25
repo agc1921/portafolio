@@ -1,17 +1,63 @@
-<div class="container py-5">
-  <div class="justify-content-center align-items-center text-center">
-    <div class ="mb-3 py-4">
-      <span class ="title-section">Contacto</span>
+<section class="contacto-section">
+  <div class="contacto-inner">
+
+    <span class="section-label">Trabajemos juntos</span>
+    <h2 class="section-title">¿Hablamos sobre<br>tu <em>proyecto</em>?</h2>
+    <p class="section-subtitle">
+      Estoy disponible para nuevos proyectos, oportunidades laborales o simplemente
+      charlar sobre tecnología. No dudes en escribirme.
+    </p>
+
+    <div class="contact-grid">
+
+      <a [href]="'mailto:' + correo" class="contact-card">
+        <div class="contact-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </div>
+        <div class="contact-card-body">
+          <span class="contact-card-label">Email</span>
+          <span class="contact-card-value">{{ correo }}</span>
+        </div>
+        <div class="contact-card-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+
+      <a [href]="'tel:' + celular" class="contact-card">
+        <div class="contact-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.85a16 16 0 0 0 6.29 6.29l1.92-1.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+        </div>
+        <div class="contact-card-body">
+          <span class="contact-card-label">Teléfono</span>
+          <span class="contact-card-value">{{ celular }}</span>
+        </div>
+        <div class="contact-card-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+
+      <a [href]="lk" target="_blank" rel="noopener" class="contact-card">
+        <div class="contact-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+            <rect x="2" y="9" width="4" height="12"/>
+            <circle cx="4" cy="4" r="2"/>
+          </svg>
+        </div>
+        <div class="contact-card-body">
+          <span class="contact-card-label">LinkedIn</span>
+          <span class="contact-card-value">Carlos Andrés Gómez</span>
+        </div>
+        <div class="contact-card-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+
     </div>
   </div>
-
-  <div class="text-center">
-    <h2>{{correo}}</h2>
-    <h2>{{celular}}</h2>
-    <a class="nav-link" [href]="lk" target="_blank">
-      <button class ="btn btn-secondary">
-        Perfil de linkedin
-      </button>
-    </a>
-  </div>
-</div>
+</section>

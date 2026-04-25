@@ -1,12 +1,111 @@
 :host {
   display: block;
-  background-color: #f9fafb;
 }
 
-.img-skills{
-  height: 65px;
-  transition: transform 0.2s ease;
-  &:hover{
-    transform: scale(1.1);
+.skills-section {
+  padding: 8rem 2rem;
+  background: #FAFAF7;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #D4B896, transparent);
   }
+}
+
+.skills-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #C4622D;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+
+  &::before {
+    content: '';
+    width: 2rem;
+    height: 1px;
+    background: #C4622D;
+    display: block;
+  }
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  color: #1C1C1C;
+  margin-bottom: 0.75rem;
+
+  em {
+    font-style: italic;
+    color: #C4622D;
+  }
+}
+
+.section-subtitle {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  color: #8A8A8A;
+  margin-bottom: 4rem;
+  line-height: 1.6;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.25rem;
+
+  @media (max-width: 900px) { grid-template-columns: repeat(3, 1fr); }
+  @media (max-width: 540px) { grid-template-columns: repeat(2, 1fr); }
+}
+
+.skill-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem 1rem;
+  border: 1px solid rgba(28,28,28,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: default;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+    border-color: #D4B896;
+
+    .skill-icon { transform: scale(1.12); }
+  }
+}
+
+.skill-icon {
+  height: 56px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.skill-name {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #3D3D3D;
+  text-align: center;
+  letter-spacing: 0.01em;
 }
