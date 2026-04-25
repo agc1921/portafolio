@@ -1,17 +1,22 @@
 <header class="nav" [class.scrolled]="isScrolled()">
   <div class="nav__inner container">
-    <a class="nav__logo" (click)="scrollTo('#hero')">
+    <a class="nav__logo" (click)="scrollTo('#about')">
       <span class="nav__logo-mark">&lt;</span>Dev<span class="nav__logo-accent">/&gt;</span>
     </a>
 
     <nav class="nav__links" [class.open]="isMenuOpen()">
-      <a *ngFor="let link of navLinks; let i = index" class="nav__link"
-        [style.animation-delay]="isMenuOpen() ? (i * 0.08 + 0.1) + 's' : '0s'" (click)="scrollTo(link.anchor)">
+      <a
+        *ngFor="let link of navLinks; let i = index"
+        class="nav__link"
+        [style.animation-delay]="isMenuOpen() ? (i * 0.08 + 0.1) + 's' : '0s'"
+        (click)="scrollTo(link.anchor)"
+      >
         <span class="nav__link-num" [innerHTML]="link.icon"></span>
         {{ link.label }}
       </a>
-      <a class="nav-link" href="./assets/hv/CV.pdf" download>
-        <button class="btn btn-secondary">
+
+      <a class="nav-link-download" href="./assets/hv/CV.pdf" download>
+        <button class="btn-download">
           <i class="bi bi-file-earmark-person"></i> Descargar HV
         </button>
       </a>

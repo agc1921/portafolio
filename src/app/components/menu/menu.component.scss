@@ -23,15 +23,21 @@
   }
 
   &__logo {
-    font-family: var(--font-mono);
+    font-family: "DM Mono", monospace;
     font-size: 1.1rem;
     font-weight: 500;
-    color: var(--charcoal);
+    color: #1c1c1c;
     cursor: pointer;
     letter-spacing: -0.02em;
+    position: relative;
+    z-index: 1002;
 
-    &-mark { color: var(--terracotta); }
-    &-accent { color: var(--terracotta); }
+    &-mark {
+      color: #c4622d;
+    }
+    &-accent {
+      color: #c4622d;
+    }
   }
 
   &__links {
@@ -43,41 +49,40 @@
   &__link {
     font-size: 0.875rem;
     font-weight: 400;
-    color: var(--graphite);
+    color: #3d3d3d;
     cursor: pointer;
     position: relative;
     display: flex;
     align-items: center;
-    gap: 0.4rem;
+    gap: 0.5rem;
     transition: color 0.25s ease;
+    text-decoration: none;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: -3px;
       left: 0;
       width: 0;
       height: 1px;
-      background: var(--terracotta);
+      background: #c4622d;
       transition: width 0.3s ease;
     }
 
     &:hover {
-      color: var(--terracotta);
-      &::after { width: 100%; }
+      color: #c4622d;
+      &::after {
+        width: 100%;
+      }
     }
   }
 
   &__link-num {
-    font-family: var(--font-mono);
-    font-size: 0.65rem;
-    color: var(--terracotta);
-    opacity: 0.7;
-  }
-
-  &__cta {
-    font-size: 0.85rem;
-    padding: 0.65rem 1.5rem;
+    font-size: 0.8rem;
+    color: #c4622d;
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
   }
 
   &__burger {
@@ -88,64 +93,129 @@
     border: none;
     cursor: pointer;
     padding: 4px;
+    position: relative;
+    z-index: 1002;
 
     span {
       display: block;
       width: 24px;
       height: 2px;
-      background: var(--charcoal);
+      background: #1c1c1c;
       border-radius: 2px;
       transition: all 0.3s ease;
       transform-origin: center;
     }
 
     &.active {
-      span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-      span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-      span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+      span:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+      span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
     }
   }
 }
 
-a{
+a {
   text-decoration: none;
 }
 
+// ─── MOBILE ────────────────────────────────────────────────────────────────
 @media (max-width: 768px) {
   .nav {
+    // Cuando el menú está abierto, el nav completo NO debe tener fondo
+    // para que el overlay del menú cubra todo limpiamente
+    &:has(.nav__links.open) {
+      background: transparent !important;
+      backdrop-filter: none !important;
+      border-bottom: none !important;
+    }
+
     &__links {
       display: none;
+      // Cubre TODO el viewport sin importar el scroll
       position: fixed;
-      inset: 0;
-      background: var(--cream);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #f5f0e8;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       gap: 2rem;
-      z-index: 999;
+      // Mayor que el nav para estar encima de todo
+      z-index: 1001;
 
       &.open {
         display: flex;
 
         .nav__link {
-          animation: fadeUp 0.4s ease both;
-          font-size: 1.5rem;
+          font-size: 1.4rem;
+          font-weight: 500;
+          animation: fadeUp 0.35s ease both;
+          color: #1c1c1c;
+
+          &:hover {
+            color: #c4622d;
+          }
         }
 
-        .nav__cta {
-          animation: fadeUp 0.4s ease 0.4s both;
-          margin-top: 1rem;
-          font-size: 1rem;
-          padding: 1rem 2.5rem;
+        // Botón de descarga dentro del menú móvil
+        .nav-link-download {
+          animation: fadeUp 0.35s ease 0.4s both;
+          margin-top: 0.5rem;
         }
       }
     }
 
-    &__link-num { font-size: 0.75rem; }
+    &__link-num {
+      font-size: 0.9rem;
+    }
 
     &__burger {
       display: flex;
-      z-index: 1001;
     }
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.btn-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #1c1c1c;
+  color: white;
+  border: none;
+  padding: 0.5rem 2rem;
+  border-radius: 99px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.25s ease;
+
+  &:hover {
+    background: #c4622d;
+  }
+
+  i {
+    font-size: 1rem;
   }
 }
