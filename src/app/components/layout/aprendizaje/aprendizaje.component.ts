@@ -23,7 +23,7 @@ export class AprendizajeComponent {
       url: "https://www.udemy.com/certificate/UC-7eda49ac-c515-4c95-84b2-e08a4bbad939/"
     },
     {
-      src: "./assets/img-aprendizaje/curso-nest.jpg",alt: "nest",
+      src: "./assets/img-aprendizaje/curso-nest.png",alt: "nest",
       url: "https://www.udemy.com/certificate/UC-2e6b76bc-3ecd-431d-a82d-05d40fe4eb9c/"
     },
     {
