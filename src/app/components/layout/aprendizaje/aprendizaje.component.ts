@@ -27,6 +27,10 @@ export class AprendizajeComponent {
       url: "https://www.udemy.com/certificate/UC-2e6b76bc-3ecd-431d-a82d-05d40fe4eb9c/"
     },
     {
+      src: "./assets/img-aprendizaje/curso-net-core.png",alt: ".net",
+      url: "https://www.udemy.com/certificate/UC-450764e5-6dec-4d7a-ade5-83cf7bd5ab0a/"
+    },
+    {
       src: "./assets/img-aprendizaje/curso-angular.jpg",alt: "angular",
       url: "https://www.udemy.com/certificate/UC-9b657733-577d-4913-a452-f39c2b72da78/"
     },

@@ -16,6 +16,7 @@ export class SkillsComponent {
   public images = [
     { src: "./assets/img-skills/angular.webp", alt: "Angular", label:"Angular" },
     { src: "./assets/img-skills/NestJS.svg", alt: "NestJS", label:"NestJS" },
+    { src: "./assets/img-skills/NET_Core_Logo.svg", alt: ".NET", label:".NET" },
     { src: "./assets/img-skills/logo-vue.png", alt: "Vue", label:"Vue" },
     { src: "./assets/img-skills/icon-nodejs.e9fdb7cb.svg", alt: "Node.js", label:"Node.js" },
     { src: "./assets/img-skills/icon-javascript.d5945e90.svg", alt: "JavaScript", label:"JavaScript" },
