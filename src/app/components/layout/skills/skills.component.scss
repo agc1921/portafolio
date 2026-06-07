@@ -64,9 +64,9 @@
 }
 
 .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 1.25rem;
+    display: grid;
+    grid-template-columns: repeat(7, 2fr);
+    gap: 1.25rem;
 
   @media (max-width: 900px) { grid-template-columns: repeat(3, 1fr); }
   @media (max-width: 540px) { grid-template-columns: repeat(2, 1fr); }
