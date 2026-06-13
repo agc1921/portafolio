@@ -72,7 +72,8 @@
 }
 
 .curso-card {
-  display: block;
+  display: flex;
+  flex-direction: column;
   background: white;
   border-radius: 16px;
   overflow: hidden;
@@ -128,6 +129,7 @@
 
 .curso-descripcion {
   padding: 0.75rem 1rem 0.5rem;
+  flex: 1;
 
   p {
     font-family: 'DM Sans', sans-serif;
