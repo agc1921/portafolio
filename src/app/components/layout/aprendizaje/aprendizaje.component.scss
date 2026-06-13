@@ -126,6 +126,19 @@
   }
 }
 
+.curso-descripcion {
+  padding: 0.75rem 1rem 0.5rem;
+
+  p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    color: #6B6B6B;
+    line-height: 1.55;
+    margin: 0;
+    min-height: 3.5rem;
+  }
+}
+
 .curso-footer {
   padding: 0.75rem 1rem;
   display: flex;
