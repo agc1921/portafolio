@@ -18,7 +18,7 @@ export class SkillsComponent {
     { src: "./assets/img-skills/NestJS.svg", alt: "NestJS", label:"NestJS" },
     { src: "./assets/img-skills/NET_Core_Logo.png", alt: ".NET", label:".NET" },
     { src: "./assets/img-skills/logo-vue.png", alt: "Vue", label:"Vue" },
-    { src: "./assets/img-skills/logo-react.svg", alt: "React", label:"React" },
+    { src: "./assets/img-skills/logo-react.svg.webp", alt: "React", label:"React" },
     { src: "./assets/img-skills/icon-nodejs.e9fdb7cb.svg", alt: "Node.js", label:"Node.js" },
     { src: "./assets/img-skills/icon-typescript.0f2fa2a9.svg", alt: "TypeScript", label:"TypeScript" },
     { src: "./assets/img-skills/icon-javascript.d5945e90.svg", alt: "JavaScript", label:"JavaScript" },
